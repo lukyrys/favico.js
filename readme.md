@@ -1,3 +1,4 @@
+[![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
 # favico.js
 More info [here](http://lab.ejci.net/favico.js/).
 
@@ -22,6 +23,9 @@ Contributors:
 All code is open source and dual licensed under GPL and MIT. Check the individual licenses for more information.
 
 ### Change log
+#### 0.3.10
+* bugfixes
+
 #### 0.3.9
 * bugfixes
 
@@ -69,3 +73,11 @@ All code is open source and dual licensed under GPL and MIT. Check the individua
 
 #### 0.1.0
 * proof of concept
+
+## Browser support
+* Chrome: Yes
+* Firefox: Yes
+* Opera: Yes
+* IE: No
+* Edge: No
+* Safari: No (Safari hides favicons)
