@@ -47,11 +47,12 @@
 
 		_browser = {};
 		_browser.ff = navigator.userAgent.indexOf('Firefox') > -1;
-		_browser.chrome = !!window.chrome;
-		_browser.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
-		_browser.ie = /*@cc_on!@*/false;
-		_browser.safari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-		_browser.supported = (_browser.chrome || _browser.ff || _browser.opera);
+		_browser.chrome = !!window.chrome && !navigator.userAgent.indexOf('Edg') > -1;
+		_browser.opera = navigator.userAgent.indexOf('OPR/') > -1 || navigator.userAgent.indexOf('Opera') > -1;
+		_browser.ie = /*@cc_on!@*/false || navigator.userAgent.indexOf('Trident/') > -1;
+		_browser.safari = navigator.userAgent.indexOf('Safari') > -1 && navigator.userAgent.indexOf('Chrome') === -1;
+		_browser.edge = navigator.userAgent.indexOf('Edg') > -1;
+		_browser.supported = (_browser.chrome || _browser.ff || _browser.opera || _browser.safari || _browser.edge);
 
 		var _queue = [];
 		_readyCb = function () {
