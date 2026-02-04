@@ -42,7 +42,7 @@
 		var _opt, _orig, _h, _w, _canvas, _context, _img, _ready, _lastBadge, _running, _readyCb, _stop, _browser, _animTimeout, _drawTimeout, _doc;
 
 		_browser = {};
-		_browser.ff = typeof InstallTrigger != 'undefined';
+		_browser.ff = navigator.userAgent.indexOf('Firefox') > -1;
 		_browser.chrome = !!window.chrome;
 		_browser.opera = !!window.opera || navigator.userAgent.indexOf('Opera') >= 0;
 		_browser.ie = /*@cc_on!@*/false;
